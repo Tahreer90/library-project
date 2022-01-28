@@ -6,13 +6,15 @@ export default function MemberItem(props) {
   const member = props.member;
   return (
     <div className="centerized">
-      <Card border="info" style={{ width: "18rem" }}>
-        <Card.Header>{member.firstName}</Card.Header>
+      <Card border="info" style={{ width: "18rem", height: "9.5rem" }}>
+        <Card.Header>{member.membership} Membership</Card.Header>
         <Card.Body>
-          <Card.Title>{member.membership} membership</Card.Title>
+          <Card.Title>
+            {member.firstName} {member.lastName}
+          </Card.Title>
           <Card.Text>
-            I have {member.currentlyBorrowedBooks} books borrowed from the
-            library.
+            I have {member.currentlyBorrowedBooks.length} books borrowed from
+            the library.
           </Card.Text>
         </Card.Body>
       </Card>

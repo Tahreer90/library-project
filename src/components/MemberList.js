@@ -1,6 +1,7 @@
 import React from "react";
 import memberStore from "../stores/memberStore";
 import MemberItem from "./MemberItem";
+import { observer } from "mobx-react";
 
 const MemberList = () => {
   const members = memberStore.members.map((member) => (
@@ -10,4 +11,4 @@ const MemberList = () => {
   return <div>{members}</div>;
 };
 
-export default MemberList;
+export default observer(MemberList);

@@ -6,11 +6,8 @@ export default function MemberItem(props) {
   const book = props.book;
   return (
     <div className="centerized">
-      <Card border="info" style={{ width: "18rem" }}>
-        <Card.Header>
-          Book Name:
-          {book.title}
-        </Card.Header>
+      <Card border="info" style={{ width: "18rem", height: "9.5rem" }}>
+        <Card.Header>{book.title}</Card.Header>
         <Card.Body>
           <Card.Title>
             Written By:
