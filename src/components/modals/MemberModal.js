@@ -60,7 +60,12 @@ const MemberModal = ({ isCreated, handleClose }) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
+          <Button
+            variant="primary"
+            type="submit"
+            margin="10px"
+            onClick={handleSubmit}
+          >
             Submit
           </Button>
           {/* <Button variant="secondary" onClick={handleClose}>

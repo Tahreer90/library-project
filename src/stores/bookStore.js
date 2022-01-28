@@ -7,6 +7,11 @@ class BookStore {
   constructor() {
     makeAutoObservable(this);
   }
+  addBook = (book) => {
+    book.id = this.books[this.books.length - 1].id + 1;
+    console.log(book);
+    this.books = [...this.books, book];
+  };
 }
 const bookStore = new BookStore();
 export default bookStore;
