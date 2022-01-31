@@ -5,7 +5,7 @@ import { observer } from "mobx-react";
 import SearchBar from "./SearchBar";
 
 const BookList = () => {
-  const [query, setQuery] = useState({ title: "", genre: "" });
+  const [query, setQuery] = useState("");
   const books = bookStore.books
     .filter(
       (book) =>
@@ -17,7 +17,7 @@ const BookList = () => {
     .map((book) => <BookItem key={book.id} book={book} />);
 
   return (
-    <div>
+    <div className="list">
       <SearchBar setQuery={setQuery} />
       {books}
     </div>

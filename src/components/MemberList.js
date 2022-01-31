@@ -8,7 +8,7 @@ const MemberList = () => {
     <MemberItem key={member.id} member={member} />
   ));
 
-  return <div>{members}</div>;
+  return <div className="list">{members}</div>;
 };
 
 export default observer(MemberList);

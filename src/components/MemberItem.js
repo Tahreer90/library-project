@@ -1,7 +1,7 @@
 import React from "react";
 import memberStore from "../stores/memberStore";
 import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function MemberItem(props) {
   const member = props.member;
@@ -11,9 +11,9 @@ export default function MemberItem(props) {
         <Card.Header>{member.membership} Membership</Card.Header>
         <Card.Body>
           <Card.Title>
-            <Link to={`/members/${member.slug}`}>
-              {member.firstName} {member.lastName}
-            </Link>
+            {/* <Link to={`/members/${member.slug}`}> */}
+            {member.firstName} {member.lastName}
+            {/* </Link> */}
           </Card.Title>
           <Card.Text>
             I have {member.currentlyBorrowedBooks.length} books borrowed from

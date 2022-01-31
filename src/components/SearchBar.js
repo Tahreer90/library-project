@@ -4,10 +4,10 @@ function SearchBar({ setQuery }) {
   return (
     <center>
       <input
+        className="search"
         type="search"
         id="form1"
-        className="form-control"
-        placeholder="Search Books"
+        placeholder="Search for Books"
         onChange={(event) => setQuery(event.target.value)}
       />
     </center>
